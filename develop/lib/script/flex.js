@@ -1,0 +1,1 @@
+(function(d,e){function f(){var b=e.querySelector("html"),c=e.getElementsByTagName("body")[0],a=d.screen.width;768<=a&&1024>a?(b.style.fontSize="76.8px",c.style.fontSize=26/(a/10)+"rem"):1024<=a?(b.style.fontSize="76.8px",c.style.fontSize=40/(a/10)+"rem"):(b.style.fontSize=a/10+"px",c.style.fontSize=12/(a/10)+"rem")}d.addEventListener("resize",f);f()})(window,document);

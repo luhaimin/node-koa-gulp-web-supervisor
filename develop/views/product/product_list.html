@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%-include("../public/header_meta")%>
+</head>
+<body>
+<p>商品列表</p>
+<!--ppppppppppp-->
+<img src="/img/test.png" alt="商品列表">
+<p>888</p>
+    <ul>
+        {%for item in requestData%}
+            <p>{{ item.name }}</p>
+            <img src="https://img.yujiso.com/{{ item.img }}" alt="">
+        {%endfor%}
+
+    </ul>
+</body>
+</html>

@@ -1,0 +1,1 @@
+$(function(){new Swiper(".swiper-container-tip",{autoplay:{disableOnInteraction:!1,delay:3e3},direction:"vertical",loop:!0}),new Swiper(".swiper-container",{autoplay:{delay:3e3,disableOnInteraction:!1},direction:"horizontal",loop:!0,pagination:{el:".swiper-pagination"}})});

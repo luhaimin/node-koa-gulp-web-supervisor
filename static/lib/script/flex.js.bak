@@ -1,0 +1,40 @@
+function resize() {
+    var html = document.querySelector("html");
+    var win = window.screen.width;
+    if (win >= 768) {
+        html.style.fontSize =  '76.8px';
+        return
+    }
+    html.style.fontSize = win / 10 + 'px';
+}
+window.addEventListener("resize", resize)
+resize()
+var body = document.getElementsByTagName("body")[0];
+body.style.fontSize = "12px"
+
+
+/*
+(function (window,document) {
+    function resize() {
+        var a = document.querySelector("html");
+        var body = document.getElementsByTagName("body")[0];
+        var b = window.screen.width;
+        if (768 <= b && b < 1024) {
+            a.style.fontSize = "76.8px";
+            body.style.fontSize = 26 / (b / 10) + 'rem';
+            return
+        } else if (b >= 1024) {
+            a.style.fontSize = "76.8px";
+            body.style.fontSize = 40 / (b / 10) + 'rem';
+            return
+        }
+        a.style.fontSize = b / 10 + "px";
+        body.style.fontSize = 12 / (b / 10) + 'rem';
+    }
+    window.addEventListener("resize", resize);
+    resize();
+})(window,document)
+
+
+
+*/

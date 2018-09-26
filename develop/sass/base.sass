@@ -1,0 +1,172 @@
+@import "./public/size"
+@import "./public/color"
+*
+  box-sizing: border-box
+
+html, body
+  font-family: Helvetica
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td
+  margin: 0
+  padding: 0
+  color: #333
+  box-sizing: border-box
+
+a
+  text-decoration: none
+  color: #333
+  -webkit-tap-highlight-color: transparent
+
+
+@keyframes inputBorder
+  0%
+    border-color: $colorDedede
+
+input
+  border: 1px solid $colorDedede
+
+input:focus
+  border: 1px solid $color0084ff
+  box-shadow: 0 0 3px $color0084ff
+  animation: inputBorder 0.5s
+
+ul, ol, li
+  list-style: none
+
+.ft-pre-container
+  padding: comp(25)
+  background: $colorEfeff4
+
+.ft-pre-list
+  width: 50%
+  display: inline-block
+  vertical-align: top
+
+.ft-pre-list li:first-child
+  font-weight: bold
+
+.s-base-a
+  line-height: comp(26)
+
+.ft-pre-content
+  padding-bottom: comp(30)
+  border-bottom: 1px solid $colorDedede
+
+.ft-pre-share
+  text-align: center
+  padding: comp(16) 0 comp(20)
+
+.ft-pre-share li
+  display: inline-block
+  margin: 0 comp(18)
+
+.ft-pre-share a
+  display: block
+
+.ft-pre-share img
+  width: comp(24)
+  height: comp(24)
+
+.ft-share-container
+  position: relative
+
+.ft-share-title
+  background: $colorEfeff4
+  font-weight: bold
+  position: absolute
+  top: comp(-10)
+  left: 50%
+  width: comp(85)
+  margin-left: comp(-42.5)
+  text-align: center
+
+.ft-subsribe
+  height: comp(32)
+  font-size: 0
+
+.ft-subsribe input, .ft-subsribe button
+  height: 100%
+
+.ft-subsribe input
+  padding: comp(10)
+  position: relative
+  top: -1px
+  width: 70%
+  outline: red
+
+.ft-subsribe button
+  width: 30%
+  border-color: transparent
+  background: $color999
+  color: $colorFFF
+  outline: none
+.subscribe-tip
+  color: $color999
+  line-height: comp(26)
+
+footer
+  background: $colorGray01
+  padding-top: comp(20)
+
+.download img
+  width: comp(22)
+  height: comp(22)
+  margin: 0 comp(8)
+
+.phone-type-en
+  font-weight: 600
+  text-align: left
+
+.phone-type-ar
+  font-weight: 600
+  text-align: right
+
+.paymethod
+  padding: comp(20) 0
+
+.paymethod li
+  display: inline-block
+  width: comp(40)
+  height: comp(25)
+  margin: 0 comp(8)
+  border-radius: comp(3)
+  overflow: hidden
+
+.paymethod img
+  width: 100%
+
+.certification, .paymethod, .download
+  text-align: center
+
+.download a
+  display: block
+
+.download > li
+  padding: comp(6) comp(6)
+  background: $colorFFF
+  border-radius: comp(6)
+  overflow: hidden
+
+.certification li, .download > li
+  display: inline-block
+  margin: 0 comp(8)
+
+.certification img
+  vertical-align: top
+  width: comp(52)
+  height: comp(20)
+
+.copy-right
+  width: 100%
+  text-align: center
+  line-height: comp(45)
+  color: #666
+  font-size: comp(10)
+.f-l
+  float: left
+.f-r
+  float: right
+.d-n
+  display: none
+.i-b
+  display: inline-block

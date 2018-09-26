@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>{% include "./public/header_meta.html" %}
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/lib/style/swiper.min.css">
+</head>
+{% include "./public/body_dir.html" %}
+
+<div class="swiper-container-tip">
+    <div class="swiper-wrapper">
+        {% for item in ablHomeNotice %}
+        <div class="swiper-slide">
+            {% if item.type==0 %}
+            <a href="javascript:void(0)">
+                <div class="tip-title">
+                    <img src="{{item.picUrl}}" alt="">
+                    <span>{{item.title}}</span>
+                </div>
+            </a>
+            {% elseif item.type==5 %}
+            <a href="{{item.content}}&type=0&coinId=3&lang=1&coinAb=SAR&title=Keep%20you%20cool">
+                <div class="tip-title">
+                    <img src="{{item.picUrl}}" alt="">
+                    <span>{{item.title}}</span>
+                </div>
+            </a>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% include "./public/nav_components/nav.html" %}
+
+
+<div class="swiper-container">
+    <style type="text/css">
+        .swiper-pagination-bullet-active {
+            opacity: 1;
+            background: #fff;
+        }
+
+        .swiper-pagination-bullet {
+            border: 1px solid #acacac;
+        }
+
+        .swiper-pagination-bullet-active {
+            border: none;
+        }
+
+    </style>
+    <div class="swiper-wrapper">
+        {% for item in carousel %}
+        <div class="swiper-slide">
+            {% if item.type==2 %}
+            <a href="https://www.skybaymall.com/src/html/topic.html?activityId={{item.content}}&type=0&coinId={{G.coinId}}&coinAb={{G.coinAb}}&lang={{G.lang}}">
+                <img src="{{item.picUrl}}" alt="">
+            </a>
+            {% elseif item.type==5 %}
+            <a href="{{item.content}}&type=0&coinId=3&lang=1&coinAb=SAR&title=Keep%20you%20cool">
+                <img src="{{item.picUrl}}" alt="{{item.productId}}">
+            </a>
+            {% endif %}
+
+        </div>
+        {% endfor %}
+    </div>
+    <div class="swiper-pagination"></div>
+</div>
+
+<ul>
+    <li>
+        <a href="/detail/4122">商品详情</a>
+    </li>
+    <li>
+        <a href="/search">查询</a>
+    </li>
+
+    <li>
+        <a href="/list/123">商品列表</a>
+    </li>
+    <li>
+        <a href="/account">个人中心</a>
+    </li>
+    <li>
+        <a href="/wish">收藏</a>
+    </li>
+    <li>
+        <a href="/cart">购物车</a>
+    </li>
+</ul>
+****************************************
+{% for item in ablHomePosition %}
+    {% if item.positionTemplet==1 %}
+        {% set foo = { bar: "baz" } %}
+        {% include "./public/index_components/template_1.html" with foo %}
+    {% elseif item.positionTemplet==2 %}
+        {% include "./public/index_components/template_2.html" %}
+    {% elseif item.positionTemplet==3 %}
+        {% include "./public/index_components/template_3.html" %}
+    {% elseif item.positionTemplet==4 %}
+        {% include "./public/index_components/template_4.html" %}
+    {% elseif item.positionTemplet==5 %}
+        {% include "./public/index_components/template_5.html" %}
+    {% elseif item.positionTemplet==6 %}
+        {% include "./public/index_components/template_6.html" %}
+    {% endif %}
+{% endfor %}
+<h1 style="font-size: 0.533rem;">首页**5555555555</h1><a href="/list/123456">跳转到商品列表555</a>
+<div style="border: 1px solid #000;width: 9.5rem;height: 1rem;"></div>
+
+
+{% include "./public/footer_01.html" %}
+{% include "./public/footer_02.html" %}
+
+<script type="text/javascript" src="/lib/script/zipto.min.js"></script>
+<script type="text/javascript" src="/lib/script/swiper.min.js"></script>
+<script type="text/javascript" src="/js/public/routerRules.js"></script>
+<script type="text/javascript" src="/js/index.js"></script>
+{% include "./public/body_endTag.html" %}

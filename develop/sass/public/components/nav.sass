@@ -1,0 +1,124 @@
+@import "../size"
+@import "../color"
+@mixin iconSize
+  content: ''
+  display: block
+  width: comp(22)
+  height: comp(22)
+
+@mixin bgsize
+  background-repeat: no-repeat
+  background-position: center
+  -webkit-background-size: 100% 100%
+  background-size: 100% 100%
+
+.s-nav-container
+  height: comp(44)
+  padding: 0 comp(15)
+  border-bottom: 1px solid $colorEfeff4
+
+.s-nav-content
+  text-align: center
+  height: 100%
+  padding-top: comp(11)
+
+.a-nav-logo, .a-nav-logo a
+  font-weight: bold
+  font-size: comp(20)
+  color: $color0084ff
+  display: inline-block
+
+.a-nav-l
+  display: inline-block
+  float: left
+
+.a-nav-r
+  display: inline-block
+  float: right
+
+.a-nav-l
+  display: inline-block
+  float: left
+
+.a-nav-r
+  display: inline-block
+  float: right
+
+.s-nav-content p
+  display: inline-block
+
+.s-nav-menu:before
+  @include iconSize
+  background: url("/img/nav/menu.png")
+  @include bgsize
+
+.a-nav-wish, .a-nav-search
+  margin: 0 comp(22)
+
+.a-nav-wish a
+  @include iconSize
+  background: url("/img/nav/wish.png")
+  @include bgsize
+
+.a-nav-search a
+  @include iconSize
+  background: url("/img/nav/search.png")
+  @include bgsize
+
+.a-nav-cart a
+  @include iconSize
+  background: url("/img/nav/cart.png")
+  @include bgsize
+
+.s-menu-bg
+  position: absolute
+  top: 0
+  left: 0
+  z-index: 10
+  border: 1px solid #000
+  height: 100%
+  width: 100%
+  position: fixed
+  background: #000
+  opacity: 0.6
+
+.h
+  display: none
+
+@keyframes menuAni
+  0%
+    left: -100%
+  100%
+    left: 0
+
+@keyframes menuAni_ar
+  0%
+    right: -100%
+  100%
+    right: 0
+
+@mixin sMenuBase
+  position: fixed
+  z-index: 11
+  overflow-y: scroll
+  background: $colorEfeff4
+  height: 100%
+  width: 75%
+  position: fixed
+  top: 0
+
+.s-menu-container
+  @include sMenuBase
+  left: -100%
+
+.s-menu-container-ar
+  @include sMenuBase
+  right: -100%
+
+.s-l
+  left: 0
+  animation: menuAni 0.5s
+
+.s-r
+  right: 0
+  animation: menuAni_ar 0.5s

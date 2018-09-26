@@ -1,0 +1,1 @@
+function routerRules(o,t){switch(o="string"==typeof o?Number(o):o){case 1:jump("https://www.skybaymall.com/#/goodsdetail?goodId=13339")}}function jump(o){window.location.href=o}
