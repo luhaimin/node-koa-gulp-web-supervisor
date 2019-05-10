@@ -1,6 +1,6 @@
 const hostName = process.env.NODE_ENV === "production"
-    ? "https://www.skybaymall.com"
-    : "https://www.skybaymall.com"      //TODO 测试环境（因目前无测试环境）
+    ? "https://www.xxxxx.com"
+    : "https://www.yyyy.com"      //TODO 测试环境（因目前无测试环境）
 
 // https://www.yujiso.com/api/sites
 //https://www.skybaymall.com
